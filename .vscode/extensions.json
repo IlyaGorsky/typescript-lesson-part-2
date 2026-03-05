@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "wallabyjs.quokka-vscode",
+        "yoavbls.pretty-ts-errors",
+        "usernamehw.errorlens",
+        "github.github-vscode-theme",
+        "eamodio.gitlens",
+        "esbenp.prettier-vscode"
+    ]
+}
