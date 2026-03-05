@@ -1,7 +1,7 @@
 /**
  * Комбинация интерфейсов
  */
-interface ShapeColor {
+interface Color {
   color: string;
 }
 
@@ -9,15 +9,14 @@ interface PenStroke {
   penWidth: number;
 }
 
-
-interface ISquare extends ShapeColor, PenStroke {
+interface Square extends ShapeColor, PenStroke {
   sideLength: number;
 }
 
-let square: ISquare;
+let square: Square;
 
 square = {
   color: "blue",
   sideLength: 10,
-  // penWidth: 5,
+  penWidth: 5,
 };

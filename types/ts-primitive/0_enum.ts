@@ -5,12 +5,12 @@
  * @see https://bit.ly/3dfcZLw
  */
 enum Frameworks {
-  Angular = "Angular", // 0
-  React // 1,
+  Angular, // 0
+  React, // 1,
   Vue, // 2
   Svelte, // 3
 }
-// console.log(Frameworks);
+console.log(Object.values(Frameworks));
 
 let currentFramework: string;
 let frameWorkId: number;

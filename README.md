@@ -12,6 +12,7 @@ TypeScript hh-school 2024
   - [tsconfig.ts](#tsconfigts)
     - [Видео на русском c разбором каждого поля конфигурации](#видео-на-русском-c-разбором-каждого-поля-конфигурации)
     - [Статьи](#статьи)
+    - [Everyday Types](#everyday-types)
 
 ## Старт
 
@@ -59,3 +60,7 @@ npx tsc
 
 [TypeScript: Раскладываем tsconfig по полочкам. Часть 1](https://habr.com/ru/articles/542234/)
 [TypeScript: Раскладываем tsconfig по полочкам. Часть 2 — Всё про строгость](https://habr.com/ru/articles/557738/)
+
+### Everyday Types
+
+[https://www.typescriptlang.org/docs/handbook/2/everyday-types.html](Everyday Types)

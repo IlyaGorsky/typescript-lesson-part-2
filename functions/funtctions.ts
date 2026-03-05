@@ -27,25 +27,23 @@
   function buildName(firstName = "Will", lastName: string): string {
     return firstName + " " + lastName;
   }
-  // let result1 = buildName("Bob", "asdsd"); // error
+  // let result1 = buildName("Bob"); // error
   // let result2 = buildName("Bob", "Adams", "Sr."); // error, too many parameters
   // let result3 = buildName("Bob", "Adams"); // okay and returns "Bob Adams"
   // let result4 = buildName(undefined, "Adams"); //
-  // console.log(result4)
 
   /**
    * Опциональный параметр
    */
   function getPriceByCountry(price: number, countryCode?: "RU"): number {
-    if (countryCode === 'RU') {
+    if (countryCode === "RU") {
       return price * 0.5 + price;
     }
     return price;
   }
 
   let res: number = getPriceByCountry(10);
-  // console.log(res);
-  // console.log(getPriceByCountry(12, "RU"));
+  getPriceByCountry(12, "RU");
 
   /**
    * Опциональный параметр литерал
@@ -53,12 +51,11 @@
   function someFunction(foo: 1, bar?: "bar") {}
 
   someFunction(1, "bar");
-  // someFunction(1, undefined);
+  // someFunction(2);
   // someFunction(1, "baz")
 
   // Типизированный spread + tuple
-  function spreadFn(foo:number, ...rest: [{ id: string }, { id: {} }, ...number[]]) {
-    console.log(foo);
+  function spreadFn(foo, ...rest: [{ id: string }, { id: {} }, ...number[]]) {
     rest[0].id + rest[3];
     // rest[1].id + rest[3]
   }
@@ -71,4 +68,42 @@
   // Аннотация типа для функции
   let fn: (a: number, b: number) => number;
   fn = (a, b) => a + b;
+}
+
+/**
+ * Перезагрузка функции (overload)
+ * @name Overload
+ */
+{
+  type CountryPrice = {
+    code: string;
+    price: number;
+  };
+
+  function getDiscountByCountry(price: number): number;
+  function getDiscountByCountry(price: number, countryCode: string): CountryPrice;
+  function getDiscountByCountry(price: number, countryCode: "RU" | "EN"): { code: "CUSTOM"; price: number };
+  function getDiscountByCountry(price: number, countryCode?: string) {
+    if (countryCode === "RU" || countryCode === "EN") {
+      let result = { code: countryCode, price: (price / 5) * 100 };
+      return result;
+    }
+    if (countryCode) {
+      let result = { code: countryCode, price };
+      return result;
+    }
+    return price;
+  }
+
+  enum CountryCode {
+    RU = "RU",
+    EN = "EN",
+  }
+
+  const v1 = getDiscountByCountry(13);
+
+  const ua = getDiscountByCountry(10, "UA");
+  // const sum = getDiscountByCountry(20)+getDiscountByCountry(20)
+  const discountEN = getDiscountByCountry(10, "RU");
+  const sumRU = getDiscountByCountry(10) + getDiscountByCountry(10, "RU").price;
 }

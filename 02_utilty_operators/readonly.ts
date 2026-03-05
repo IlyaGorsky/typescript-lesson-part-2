@@ -11,16 +11,16 @@ interface User {
 /**
  * Readonly object field
  */
-const UserApplicant: User = {
-  type: "applicant",
-};
+// let UserApplicant: User = {
+//     type: "applicant",
+// };
 
 // UserApplicant.type = "admin";
 
-let protectedUserApplicant: Readonly<User> = {
-  type: "applicant",
-  name: "Ilya",
-};
+// let protectedUserApplicant: Readonly<User> = {
+//     type: "applicant",
+//     name: "Ilya",
+// };
 
 // protectedUserApplicant.type = 'root';
 // protectedUserApplicant.name = "d";
@@ -29,7 +29,6 @@ let protectedUserApplicant: Readonly<User> = {
  * Readonly arrays
  */
 var abc: readonly string[] = ["a", "b", "c"];
-// abc.push(123);
 var abc: Readonly<Array<string>> = ["a", "b", "c"];
 var abc: ReadonlyArray<string> = ["a", "b", "c"];
 

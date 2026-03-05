@@ -5,7 +5,7 @@
  */
 interface UserConfig {
   name: string;
-  age: number;
+  age?: number;
 }
 
 function createUserConfig(userConfig: UserConfig) {
@@ -15,5 +15,5 @@ function createUserConfig(userConfig: UserConfig) {
   };
 }
 
-// createUserConfig({ name: "Ilya" });
-// createUserConfig({ age: "123", name: "Ilya" });
+createUserConfig({ name: "Ilya" });
+createUserConfig({ age: "123", name: "Ilya" });

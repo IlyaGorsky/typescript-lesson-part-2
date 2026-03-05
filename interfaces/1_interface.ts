@@ -17,8 +17,8 @@ function printUserFullName(user: IUser): void {
 let someUser = {
   firstName: "Dead",
   lastName: "Pool",
-  middleName: "Zombie",
+  // middleName: "Zombie",
 };
 
-// printUserFullName(someUser);
-// printUserFullName({ firstName: "Dead", lastName: "dddd", middleName: "Zombie" });
+printUserFullName(someUser);
+printUserFullName({ firstName: "Dead", lastName: "dddd" });
