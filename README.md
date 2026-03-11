@@ -1,5 +1,7 @@
 # Typescript-School-2026 (ЧАСТЬ 2)
 
+> **Часть 1:** [typescript-lesson-part-1](https://github.com/IlyaGorsky/typescript-lesson-part-1)
+
 - [Typescript-School-2026 (ЧАСТЬ 2)](#typescript-school-2026-часть-2)
   - [Презентация](#презентация)
   - [Обратная связь](#обратная-связь)
