@@ -66,6 +66,7 @@
         kind: "circle";
         radius: number;
     }
+
     let SomeShape: SimpleSquare | Rectangle | Circle;
 
     SomeShape = {
@@ -73,7 +74,7 @@
         radius: 10,
     };
 
-    SomeShape.radius;
+    // SomeShape.radius
 }
 
 /**
@@ -115,5 +116,5 @@
         }
     }
 
-    getFigureWidth({ kind: "circle", radius: 10 });
+    getFigureWidth({ kind: "test", radius: 10 });
 }

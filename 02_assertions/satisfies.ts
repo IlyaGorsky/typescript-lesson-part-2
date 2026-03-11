@@ -12,5 +12,5 @@
   function sendPersonData(data: Person) {}
   const data = { name: "", age: 2 } satisfies Omit<Person, 'date'>;
 
-  sendPersonData(data);
+  // sendPersonData(data);
 }

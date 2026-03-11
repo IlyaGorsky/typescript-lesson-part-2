@@ -1,4 +1,4 @@
-function foo(): { firstName: string; lastName: string } {
+function foo() {
   return {
     firstName: "Dead",
     lastName: "Pool",

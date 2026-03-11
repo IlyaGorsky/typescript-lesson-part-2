@@ -5,6 +5,6 @@ interface Person {
 }
 
 function sendPersonData(data: Person) { }
-const data = { name: '', age: 2 } as Person;
+const data = { name: '', age: 2 };
 
 sendPersonData(data);

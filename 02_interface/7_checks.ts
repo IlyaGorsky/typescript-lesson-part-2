@@ -14,7 +14,9 @@ function createSquare(config: SquareConfig) {
   }
 }
 
-createSquare({ color: "20fa", width: 20, opacity: 0.5 });
+// const config2 = { color: "20fa", width: 20, opacity: 0.5 };
+
+// createSquare({ color: "20fa", width: 20, opacity: 0.5 });
 //                                          ^^^^^^^^^^^^  does not exist in type SquareConfig
 // typescript не дает возможность передать объект больше чем перечислеными свойствами в SquareConfig
 
@@ -22,8 +24,8 @@ createSquare({ color: "20fa", width: 20, opacity: 0.5 });
  * Cпособ 1
  * Можно решить эту проблему с помощью  приведением типа (casting type)
  */
-let config = { color: "20fa", opacity: 0.5, foo: "2" } as SquareConfig;
-// createSquare(config);
+let config = { color: "20fa", foo: "2" } as SquareConfig;
+createSquare(config);
 
 /**
  * Cпособ 2
@@ -56,12 +58,12 @@ createSuperSquare({ color: "20fa", width: 20, opacity: 0.5 });
   };
 
   function createSquare(config: SquareConfig) {
-    // if (config.color) {
-    //     console.log(config.color, config.width);
-    // }
+    if (config.color) {
+        console.log(config.color, config.width);
+    }
   }
 
-  // createSquare(redSquare);
+  createSquare(redSquare);
   // createSquare({ color: "20fa", width: 20, opacity: 0.5 });
 
   const point: SquareConfig = redSquare;

@@ -15,16 +15,20 @@
     hhuid: "abcdef",
     token: "asdjh873hrhjb!usdhf",
   });
-  // interface AdditionalProps {
-  //     hhid: string;
-  //     hhuid: string;
-  //     token: number;
-  // }
-  // const userSession2 = addVariableToSession<AdditionalProps>({
-  //     hhid: "123456",
-  //     hhuid: "abcdef",
-  //     token: "asdjh873hrhjb!usdhf",
-  // });
 
-  console.log(userSession.additionalProp.token);
+
+  interface AdditionalProps {
+      hhid: string;
+      hhuid: string;
+      token: number;
+  }
+
+
+  const userSession2 = addVariableToSession<AdditionalProps>({
+      hhid: "123456",
+      hhuid: "abcdef",
+      token: 1,
+  });
+
+  console.log(userSession2.additionalProp.token);
 }

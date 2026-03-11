@@ -11,17 +11,21 @@ const isValidDate = (value: unknown): value is Date => {
 
 const printDate = (date: unknown) => {
   if (isValidDate(date)) {
-    console.log(date.getDay());
+    console.log(date.getDate());
+    return;
   }
   throw new Error("Invalid date");
 };
 
+
+// printDate(new Date())
 
 
 interface PrintUser {
   name?: string;
   age?: number;
 }
+
 
 const isUser = (x: unknown): x is PrintUser => {
   if (typeof x === "object" && x != null && "name" in x && "age" in x) {
@@ -33,8 +37,9 @@ const isUser = (x: unknown): x is PrintUser => {
 const printUser = (user: PrintUser) => {
   if (isUser(user)) {
     console.log(user.name, user.age);
+    return
   }
   console.log("unknown");
 };
 
-// printUser(new Date());
+// printUser({ name: 'Ilya', age: 32});

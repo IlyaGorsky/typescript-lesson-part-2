@@ -18,11 +18,11 @@
         c: true,
     };
 
-    // const aPropFromSource: number = getObjectProperty(sourceObjectExample, "a");
-    // const aPropFromSourceAuto = getObjectProperty(sourceObjectExample, "a");
+    const aPropFromSource = getObjectProperty(sourceObjectExample, "a");
+    const aPropFromSourceAuto = getObjectProperty(sourceObjectExample, "b");
     // const aPropFromSourceError: boolean = getObjectProperty(
     //     sourceObjectExample,
-    //     "a"
+    //     "b"
     // );
 
     // const dPropFromSource: boolean = getObjectProperty(
@@ -72,15 +72,17 @@
  * Дженерный интерфейс
  */
 {
-    interface AbstractIcon<Kind extends string = "default"> {
+    interface AbstractIcon<T extends string = "default"> {
         size: 16 | 24 | 32;
-        kind: Kind;
+        kind: T;
     }
 
     const defaultIcon: AbstractIcon = { size: 16, kind: "default" };
     const _defaultIcon: AbstractIcon<"loading"> = { size: 16, kind: "loading" };
 
     const removeIcon: AbstractIcon<"remove"> = { size: 24, kind: "remove" };
+
+ 
 
     // const _removeIcon: AbstractIcon<"remove"> = { size: 16, kind: "default" };
     // const __removeIcon: AbstractIcon<"remove"> = { size: 16, kind: "loading" };
@@ -119,6 +121,16 @@
         "vacancy_view"
     );
 
-    console.log(vacancyPage.fullPageState.company.name);
-    console.log(vacancyPage.fullPageState.pageName);
+    type Ids = number;
+    type Some = string;
+    interface AnalyticsPage {
+        funnel: [Ids, Some][]
+    }
+
+    const analyticsPage = new Page<AnalyticsPage>({
+        funnel: [[123, 'test']],
+    }, 'analytics title fullen')
+
+    // console.log(vacancyPage.fullPageState.);
+    // console.log(vacancyPage.fullPageState.pageName);
 }

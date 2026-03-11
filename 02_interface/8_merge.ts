@@ -6,26 +6,61 @@ interface Car {
 }
 
 interface Car {
-  // fuel: boolean;
+  fuel: boolean;
 }
 
 interface Car {
   fuel: boolean;
-  // color: string;
+  color: string;
   // model: boolean;
 }
 
 let bmwCar: Car = {
   model: "f30",
   fuel: true,
+  color: 'white',
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Полезный пример - можно расширять глобальный интерфейс
 interface Window {
   webkitAudioContext: typeof AudioContext;
 }
 
-const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+const audioContext = new (window.AudioContext || window.webkitAudioContext)().
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // type vs interface
 // типа можно реализовать или расширить, только если он представляет объектный тип

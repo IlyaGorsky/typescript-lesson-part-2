@@ -32,7 +32,7 @@
     height: 10,
   };
 
-  function getFigureWidth(fig: TypeShape): number {
+  function getFigureWidth(fig: TypeShape) {
     switch (fig.kind) {
       case "rectangle":
         return fig.width;
@@ -40,9 +40,8 @@
         return fig.radius;
       case "square":
         return Math.sqrt(fig.size);
-      default:
-        const _exhaustiveCheck: never = fig;
-        return _exhaustiveCheck;
+        // const _exhaustiveCheck: never = fig;
+        // return _exhaustiveCheck;
     }
   }
 

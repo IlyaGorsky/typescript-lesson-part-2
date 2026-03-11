@@ -49,10 +49,10 @@ function getUserFavoriteArticles(
 }
 
 const responseData = {
-    Ok: true,
-    // Ok: false,
+    // Ok: true,
+    Ok: false,
     error: {
-        message: "Bad Request",
+        message: "test",
     },
     articles: [
         { id: 1, name: "Article 1" },

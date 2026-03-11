@@ -1,7 +1,7 @@
 {
     const app = document.getElementById('app');
 
-    app.innerHTML = 'Hello, World!';
+    // app.innerHTML = 'Hello, World!';
     
     if (app) {
         app.innerHTML = 'Hello, World!';
@@ -22,3 +22,13 @@
 }
 
 
+
+{
+    const app = document.getElementById('app');
+
+    // app.innerHTML = 'Hello, World!';
+    
+    if (app) {
+        app.innerHTML = 'Hello, World!';
+    }
+}
