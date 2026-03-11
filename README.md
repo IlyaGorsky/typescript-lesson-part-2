@@ -173,6 +173,11 @@ npx tsc --init
 
 - [Type Challenges](https://github.com/type-challenges/type-challenges) — задачи на систему типов
 
+### Глоссарий
+
+- [Глоссарий — Часть 1](glossary-part-1.md)
+- [Глоссарий — Часть 2](glossary.md)
+
 ### Шпаргалки
 
 - [TypeScript Cheatsheets](https://www.typescriptlang.org/cheatsheets/)
